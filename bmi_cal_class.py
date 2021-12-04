@@ -1,14 +1,15 @@
 """
 class method
 """
-class Bmi_cal:
+class Bmi_cal():
     "bmi calculator"
-    def cal_bmi(self): 
-        return self.bmi(self.weight / (self.height/100)**2)
     def __init__(self):
         self.name=input("enter the name:")
         self.height=float(input("height:"))
         self.weight=float(input("weight:"))
+        self.bmi1=self.bmi(self.weight / (self.height/100)**2)  
+        return self.bmi1
+"""        
     def bmi_index(self):
         if (self.bmi< 16.0):
             return "severely underweight"
@@ -22,8 +23,8 @@ class Bmi_cal:
             return "severely obese"    
         else : 
             return("morbidly obese")
+            """
 bmi_calculator= Bmi_cal()
-bmi_calculator.cal_bmi()
-bmi_calculator.bmi_index()
-print(bmi_calculator.Bmi_cal,bmi_calculator.cal_bmi(),bmi_calculator.bmi_index())
-            
+#bmi_calculator.bmi_index()
+print(bmi_calculator)
+          
